@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <!-- 
+        Cấu trúc : Thẻ <form> được sử dụng để tạo ra một form
+        input types : 
+            + text
+            + password
+            + date 
+            + time
+            + number
+            + email
+            +month
+            +week
+            +radio
+            +checkbox
+            +file
+            +search
+            +reset
+            +select - option
+            +submit
+            +color
+            +hidden
+            +url
+            +button
+        label : để đặt tên và bổ trợ thẻ input, có attribute for sẽ liên kết đến id của input
+        Attribute của thẻ input : readonly chỉ đọc và k thay đổi được , required yêu cầu k được để trống và đúng format 
+                                  , type phân biệt loại của input v..v...
+     -->
+
+    <form action="" method="">
+        <div>
+            <label for="email">Email</label>
+            <input id="email" required readonly type="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password">
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="password">
+        </div>
+        <div>
+            <label for="nam">Nam</label>
+            <input id="nam" name="gender" type="radio">
+            <label for="girl">Nữ</label>
+            <input id="girl" name="gender" type="radio">
+        </div>
+        <div>
+            <label for="date">Birthday</label>
+            <input id="date" type="date">
+        </div>
+        <div>
+            <label for="number">Age</label>
+            <input id="number" type="number">
+        </div>
+        <div>
+            <label for="color">My Color</label>
+            <input id="color" type="color">
+        </div>
+        <div>
+            <label for="month">My month</label>
+            <input id="month" required type="month">
+        </div>
+        <div>
+            <label for="week">My week</label>
+            <input id="week" type="week">
+        </div>
+        <div>
+            <select>
+                <option value="">--Chọn địa điểm--</option>
+                <option value="">Đà Nẵng</option>
+                <option value="">Hà Nội</option>
+                <option value="">Hồ Chí Minh</option>
+            </select>
+        </div>
+        <div>
+            <label for="Reset">Reset</label>
+            <input id="Reset" type="reset">
+        </div>
+        <div>
+            <label for="tel">SDT</label>
+            <input id="tel" type="tel">
+        </div>
+        <div>
+            <label for="football">Đá bóng</label>
+            <input id="football" name="fav" type="checkbox">
+            <label for="tennis">Tennis</label>
+            <input id="tennis" name="fav" type="checkbox">
+        </div>
+
+        <button type="submit">Đăng kí</button>
+    </form>
+</body>
+
+</html>
