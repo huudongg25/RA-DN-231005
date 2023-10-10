@@ -1,0 +1,95 @@
+<!-- 
+        table: tạo bảng 
+         + tr: để tạo hàng
+         + th: tạo cột cho phần thead
+         + td: tạo cột 
+        caption: hiển thị nội dung của bảng
+        các thuộc tính (attribute của table);
+        border: tạo đường viền cho bảng
+        cellpadding:khoảng cách từ content đến boder  trong của bảng
+        cellspacing: khoảng cách từ border bảng đến border content
+        colspan    : để gộp cột
+        rowspan    : để gộp hàng
+        width      : set độ rộng cho table
+        height     : set chiều cao cho table
+        align      : căn chỉnh phần tử trong table
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline tag - Table</title>
+</head>
+
+<body>
+    <h1>Learn HTML Table</h1>
+    <table  border="1px" cellpadding="0" cellspacing="0" width="500px" height="300px">
+        <caption>Quản lí users</caption>
+        <thead bgcolor="#ddd" align="center">
+            <tr>
+                <th rowspan="2">stt</th>
+                <th>Fullname</th>
+                <th>price</th>
+            </tr>
+            <tr>
+                <th>name</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>1</td>
+                <td>bình</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>thịnh</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hùng</td>
+                <td>10000</td>
+            </tr>
+        </tbody>
+        <tfoot bgcolor="#ddd" align="center">
+            <tr>
+                <td colspan="2">Tổng cộng</td>
+                <td>30000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <caption>Thẻ PROGRESS</caption>
+    <progress max="100" value="50"></progress>
+    <br>
+
+    <caption>Thẻ Audio</caption>
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <span> Dont copyright &copy;</span>
+
+
+
+    <hr>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.557444580656!2d108.20760737586173!3d16.036537240310857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142199388f2bd49%3A0xd9a4963781c02c50!2zMzYzIE5ndXnhu4VuIEjhu691IFRo4buNLCBLaHXDqiBUcnVuZywgQ-G6qW0gTOG7hywgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1696905387194!5m2!1svi!2s"
+        width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <hr>
+    <iframe width="260" height="215" src="https://www.youtube.com/embed/ff7dvE-4mMA?si=gKD26gj8x1vYRUNt"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</body>
+
+</html>
