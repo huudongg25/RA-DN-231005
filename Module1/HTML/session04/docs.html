@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <!-- Kiểu internal -->
+    <!-- <style>
+        p {
+            color: red;
+        }
+        h2 {
+            font-size: 40px;
+        }
+
+    </style> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./docs.css">
+</head>
+
+<body>
+    <!-- 
+        Có 3 cách để sử dụng CSS trong HTML :
+            + inline CSS : sẽ sử dụng thuộc tính style để CSS vào trong thẻ đó
+            + internal CSS : Sử dụng bên trong cặp thẻ <style></style> đặt ở phần thẻ <head> của HTML
+            + external CSS : Sử dụng file .css để viết và liên kết đến HTML bằng thẻ <link>
+        
+        Các bộ chọn cơ bản CSS : 
+                + tag name : gọi tới thẻ html => p , h1 , div ....
+                + class : gọi tới các elements có class được gọi => .description , .test ,....
+                + id : gọi tới element được chỉ định => #title
+        
+        Thứ tự ưu tiên của các bộ chọn cơ bản : tag html => class => id 
+       
+        Trong CSS !important thì nó sẽ là độ ưu tiên cao nhất
+
+        1 vài thuộc tính CSS cơ bản : 
+                + color : để xét màu chữ
+                + background-color : để xét màu nền
+                + border : "1px solid red" => độ dày , kiểu , màu
+                + font-style : "italic"
+                + font-weigth : 600 => độ dày
+                + list-style : "none" => bỏ đi các gạch của thẻ ul
+                + text-decoration : none | underline => để bỏ gạch chân dưới hoặc gạch dưới
+                + letter-spacing : px => tạo khoảng cách giữa cách chữ trong 1 từ
+                + line-height :  => chiều cao của chữ
+                + width : để xét chiều ngang 
+                + height : để xét chiều cao 
+                + display : inline-block => giúp giữ đc tính chất inline nhưng vẫn có thể xét được tính giống block
+
+        Kiểu chữ serif vs san-serif => serif là kiểu chữ có dấu gạch ở đuôi chữ , san-serif là kiểu k có dấu gạch
+
+        Mỗi thẻ sẽ luôn có CSS mặc định => mình sẽ có reset CSS (Đây là việc đầu tiên để bắt đầu dự án) tránh thuộc tính mặc định của thẻ
+     -->
+
+    <main>
+        <p class="description red" id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eligendi
+            iusto nostrum dolor, voluptas quae reiciendis aliquid autem perspiciatis ex porro id laborum dolorum tempore
+            nemo consequuntur odit iure! Eum, ullam!
+            Aspernatur hic earum repellat velit consectetur voluptatibus accusantium, porro exercitationem doloremque
+            deleniti, id expedita! Iste porro officiis minus atque accusamus minima doloremque beatae saepe hic rem
+            quidem repudiandae, distinctio vel?</p>
+
+        <p class="test"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, laboriosam libero, animi
+            eos rem labore quas nam, pariatur sequi voluptatum cum dignissimos eum maxime molestiae. Dolore asperiores
+            omnis non fugit!</p>
+
+        <h2>Đây là tiêu đề</h2>
+
+
+        <div class="content-group">
+            <p class="red">Hôm nay mệt quá</p>
+            <p>Tối đi nhậu đi</p>
+            <h2>tiêu đề</h2>
+        </div>
+
+        <ol>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ol>
+
+
+        <div>
+            <span>hữu</span><span>đồng</span>
+        </div>
+    </main>
+</body>
+
+</html>
