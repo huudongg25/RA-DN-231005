@@ -1,0 +1,79 @@
+/* reset CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+/* login section */
+
+.login-section {
+    background-color: #3a5795;
+}
+
+.text-white {
+    color: #fff;
+    font-size: 13px;
+}
+
+.text-sub-login {
+    color: #7291bb;
+}
+
+.btn-login {
+    background-color: #627aac;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #333;
+}
+
+.title-register {
+    color: #333;
+}
+
+/* đây là selector yêu cầu có cả title-register và desc */
+.title-register.desc {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    border: 1px solid #c0cada;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #777a7e;
+}
+
+.desc-register {
+    color: #91a0a4;
+    font-size: 12px;
+}
+
+.why {
+    font-size: 10px;
+}
+
+.btn-register {
+    background-color: #609f4d;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #333;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
