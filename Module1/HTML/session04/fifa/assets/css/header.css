@@ -1,0 +1,41 @@
+.header {
+    background-color: #045694;
+    padding: 15px 30px;
+}
+
+.header-logo,
+.header-nav {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header-logo img {
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.header-logo i,
+.header-nav ul li {
+    color: #fff;
+}
+
+.header-logo i {
+    padding: 8px 9px;
+    background-color: #296fa4;
+    border-radius: 50%;
+}
+
+.header-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header-nav ul li:hover {
+    opacity: 1;
+}

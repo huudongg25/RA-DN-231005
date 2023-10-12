@@ -1,0 +1,60 @@
+.banner {
+    padding-left: 30px;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://digitalhub.fifa.com/transform/2ad3545c-140f-436c-afe8-dd066f63719c/Enzo-Fernandez-Argentina?io=transform:fill,height:1024,width:1920&quality=75");
+}
+
+.banner-group {
+    padding-top: 450px;
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+}
+
+.banner-desc {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.banner-group h3 {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+/* banner */
+
+.tournaments {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #045694;
+}
+
+.tournaments-element {
+    text-align: left;
+    width: 20%;
+    display: inline-block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/* K phải là phần tử con cuối cùng thì nhận CSS */
+.tournaments-element:not(:last-child) {
+    margin-right: 40px;
+}
+
+figcaption {
+    color: #fff;
+}
+
+.tournaments-element img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.tournaments-element:hover ,
+.tournaments-element img {
+    transform: scale(1.05);
+}
