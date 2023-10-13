@@ -54,7 +54,151 @@ figcaption {
     border-radius: 10px;
 }
 
-.tournaments-element:hover ,
+.tournaments-element:hover,
 .tournaments-element img {
     transform: scale(1.05);
+}
+
+/* tounaments */
+
+.banner-store {
+    height: 800px;
+    background-image: url("https://digitalhub.fifa.com/transform/81be39fe-e184-484c-9254-75b6cb15655f/FPLS_FIFAStore_Banner_01?io=transform:fill,aspectratio:21x9,width:1536&quality=75");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.banner-store-item {
+    width: 850px;
+    transform: translateX(30px);
+    padding-top: 15%;
+}
+
+.banner-store-item h2 {
+    color: #fff;
+    font-size: 35px;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner-store-item p {
+    margin: 20px 0;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.banner-store-item button {
+    padding: 16px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.banner-store-item button:hover {
+    transform: scale(1.05);
+    color: #333;
+    background-color: #fff;
+}
+
+/* banner store */
+.store {
+    padding: 30px;
+    text-align: center;
+}
+
+.store figure {
+    display: inline-block;
+    width: 15.5%;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.store figure:hover {
+    transform: scale(1.05);
+}
+
+.store figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.store figure figcaption {
+    margin-top: 15px;
+    color: #333;
+    display: -webkit-box;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.store figure:not(:last-child) {
+    margin-right: 15px;
+}
+
+.banner-store.banner-store2 {
+    background-image: url("https://digitalhub.fifa.com/transform/6dbd41e4-2acb-4d70-a237-0e328e15bb2d/FIFAPLUS_Tournaments_ORIGINALS_1920x747?io=transform:fill,aspectratio:21x9,width:1536&quality=75");
+}
+
+.banner-store.banner-store3 {
+    background-image: url("https://digitalhub.fifa.com/transform/42a02390-6fb8-4841-b0a5-b4957f0813e6/FplusC_HERO_2112x984?io=transform:fill,aspectratio:21x9,width:1536&quality=75");
+}
+
+/* store */
+
+.play-zone {
+    padding: 30px;
+    text-align: center;
+}
+
+.play-zone-item {
+    display: inline-block;
+    width: 20%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.play-zone-item1 {
+    background-image: url("https://digitalhub.fifa.com/transform/c8c34270-4630-4992-a478-d2d70cdddd0f/FIFAPLS_PlayZone_Rail_TH_02_FIVES?io=transform:fill,aspectratio:16x9,width:450&quality=75");
+}
+
+.play-zone-item2 {
+    background-image: url("https://digitalhub.fifa.com/transform/89d716b1-495a-4ab7-a64c-4bab013deb6d/FIFAPLS_PlayZone_Rail_TH_04-GLOBAL?io=transform:fill,aspectratio:16x9,width:450&quality=75");
+}
+
+.play-zone-item3 {
+    background-image: url("https://digitalhub.fifa.com/transform/2ac28735-9298-4cb3-be1a-7037bd941038/FIFAPLS_PlayZone_Rail_TH_05_WHO-AM-I?io=transform:fill,aspectratio:16x9,width:450&quality=75");
+}
+
+.play-zone-item4 {
+    background-image: url("https://digitalhub.fifa.com/transform/44917a28-1634-450e-8ab2-f2b3a731c035/FIFAPLS_PlayZone_Rail_TH_06_HEAD2HEAD?io=transform:fill,aspectratio:16x9,width:450&quality=75");
+}
+
+.play-zone-item p {
+    color: #fff;
+    background-color: rgba(184, 177, 177, 0.5);
+    padding: 10px;
+    transform: translateY(210px);
+    transition: 0.5s;
+}
+
+.play-zone-item:hover p {
+    transform: translateY(160px);
+}
+
+.play-zone-item:not(:last-child) {
+    margin-right: 30px;
 }
