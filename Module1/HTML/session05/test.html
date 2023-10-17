@@ -12,12 +12,38 @@
         .zoomed-image {
             width: 100%;
             height: auto;
-            background-size: 100% 100%;
+            background-size: cover;
             transition: transform 0.3s;
         }
 
         .zoomed-image:hover {
             transform: scale(1.2);
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .element1 {
+            /* Hiển thị element1 mặc dù không hover */
+            display: block;
+            /* Tùy chỉnh kiểu hiển thị */
+            background-color: #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .element2 {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        .element1:hover+.element2 {
+            display: block;
         }
     </style>
 </head>
@@ -27,6 +53,16 @@
     <div class="image-container">
         <img class="zoomed-image" src="https://thietbiquayphim.com/wp-content/uploads/2022/05/meo-chup-anh-cun-cung.png"
             alt="Zoomed Image">
+    </div>
+    <div class="container">
+        <div class="element1">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste possimus distinctio fuga velit quibusdam commodi totam doloribus impedit. Adipisci porro exercitationem officia beatae quo quod iusto eveniet, autem repellat corrupti.</p>
+        </div>
+        <div class="element2">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita doloremque, odio mollitia, perferendis
+                minus iste deserunt rerum repellat velit magni doloribus. Sint aspernatur voluptatem non fuga quod!
+                Iure, numquam dolor.</p>
+        </div>
     </div>
 
 </body>
