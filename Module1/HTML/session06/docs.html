@@ -9,6 +9,9 @@
         h2 {
             margin-top: 0;
             float: right;
+            position: static;
+            z-index: 20;
+            color: yellow;
         }
 
         .clear {
@@ -19,20 +22,22 @@
             width: 100px;
             height: 100px;
             background-color: yellowgreen;
-            position: relative;
+            /* position: relative; */
             top: -40px;
             right: -20px;
             z-index: 1;
         }
+
         .relative2 {
-            position: relative;
+            /* position: relative; */
             width: 100px;
             height: 100px;
             background-color: red;
             top: -100px;
         }
+
         .relative3 {
-            position: relative;
+            /* position: relative; */
             width: 100px;
             height: 100px;
             background-color: blue;
@@ -45,7 +50,6 @@
             width: 600px;
             height: 600px;
             background-color: red;
-            position: relative;
             left: 100px;
         }
 
@@ -54,23 +58,76 @@
             height: 150px;
             background-color: violet;
             position: absolute;
+            right: 0;
+            top: 0;
         }
 
         .fixed {
-            position: fixed;
+            /* position: fixed; */
             top: 0;
             right: 0;
             bottom: 0;
             width: 300px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: red;
             z-index: 10;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 600px;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .flex-item {
+            text-align: center;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            border: 1px solid #ccc;
+        }
+
+        .flex-item1 {
+            flex-basis: 200px;
+        }
+
+
+        .grid-container {
+            background-color: blueviolet;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 150px 400px 200px;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            background-color: #fff;
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .menu {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .footer {
+            grid-column-start: 2;
+            grid-column-end: 4;
         }
     </style>
 </head>
 
 <body>
 
-    <main style="margin-right: 300px;">
+    <main>
 
         <fieldset>
             <legend>float</legend>
@@ -78,7 +135,8 @@
                 inventore adipisci illo quas voluptatem quae modi reiciendis delectus ipsa temporibus placeat impedit
                 cum nulla.</p>
             <h2>Titleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h2>
-            <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident illum nisi. Officiis quidem rem
+            <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident illum nisi.
+                Officiis quidem rem
                 itaque, dolor ipsam cupiditate autem quasi reiciendis mollitia voluptas modi est explicabo quisquam eius
                 laboriosam!
                 Dolore assumenda repellendus eos aliquid quidem consequuntur a repellat nihil, sunt distinctio molestiae
@@ -91,24 +149,55 @@
             <div class="relative3"></div>
             <div class="relative"></div>
             <div class="relative2"></div>
-            
+
         </fieldset>
 
-        <fieldset>
+        <fieldse style="position: relative;">
             <legend>position : absoulute</legend>
 
             <div class="parent">
                 <div class="child"></div>
             </div>
-        </fieldset>
+        </fieldse>
 
         <fieldset>
             <legend>position: fixed</legend>
             <div class="fixed">
-                <ul><li></li>
-                <li></li>
-                <li></li>
-                <li></li></ul>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>flex box</legend>
+
+            <div class="flex-container">
+                <div class="flex-item flex-item1">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+                <div class="flex-item">6</div>
+                <div class="flex-item">7</div>
+                <div class="flex-item">8</div>
+                <div class="flex-item">9</div>
+                <div class="flex-item">10</div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>grid</legend>
+            <div class="grid-container">
+                <div class="header">header</div>
+                <div class="menu">menu</div>
+                <div class="main">main</div>
+                <div class="right">right</div>
+                <div class="footer">footer</div>
             </div>
         </fieldset>
     </main>
