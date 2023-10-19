@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         h2 {
             margin-top: 0;
             float: right;
@@ -104,7 +108,7 @@
             padding: 10px;
         }
 
-        .grid-container > div {
+        .grid-container>div {
             background-color: #fff;
         }
 
@@ -122,7 +126,40 @@
             grid-column-start: 2;
             grid-column-end: 4;
         }
+
+        .background-rwd {
+            height: 500px;
+            background-color: orange;
+            justify-content: space-around;
+            /* display: flex;
+            justify-content: space-around;
+            align-items: center; */
+        }
+
+        .background-rwd div {
+            width: 150px;
+            height: 50px;
+            background-color: #ccc;
+        }
+
+
+        /* table screen */
+        @media screen and (max-width:1024px) {
+            /* .background-rwd {
+                background-color: red;
+                flex-direction: column;
+            } */
+        }
+
+
+        /* mobile screen */
+        @media screen and (max-width:768px) {
+            /* .background-rwd {
+                background-color: blue;
+            } */
+        }
     </style>
+    <link rel="stylesheet" href="./grid-css/grid.css">
 </head>
 
 <body>
@@ -198,6 +235,16 @@
                 <div class="main">main</div>
                 <div class="right">right</div>
                 <div class="footer">footer</div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Responsive Web Design</legend>
+
+            <div class="background-rwd row">
+                <div class="c-3 m-8 mp-12"></div>
+                <div class="c-3 m-8 mp-12"></div>
+                <div class="c-3 m-8 mp-12"></div>
             </div>
         </fieldset>
     </main>
