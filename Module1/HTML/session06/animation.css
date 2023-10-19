@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dots {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: slideDownAndUp 1s  infinite alternate-reverse;
+}
+
+.dots.two {
+    animation: slideDownAndUp 1s 0.3s infinite alternate-reverse;
+}
+
+.dots.three {
+    animation: slideDownAndUp 1s 0.6s infinite alternate-reverse;
+}
+
+@keyframes slideDownAndUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0.2;
+        background-color: yellow;
+    }
+
+    100%{
+        transform: translateY(-10px);
+        opacity: 1;
+        background-color: rgb(53, 53, 111);
+    }
+}
