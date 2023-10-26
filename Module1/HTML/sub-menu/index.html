@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub-menu</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
     <header class="header">
         <nav>
@@ -50,5 +52,28 @@
             </ul>
         </nav>
     </header>
+
+    <div id="popup" class="popup">
+        <div class="popup-item">
+            <span id="close" onclick="closePopup()">X</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque aut natus aliquid deserunt illum
+                rem sequi? Vero, blanditiis excepturi sit distinctio nam facere possimus harum, architecto, ratione
+                accusantium voluptatem?</p>
+        </div>
+    </div>
+    <button  onclick="openPopup()">Mở</button>
+    <script>
+        const popup = document.getElementById("popup")
+        
+        function openPopup(){
+            popup.style.display = "grid"
+        }
+
+        function closePopup() {
+            popup.style.display = "none"
+        }
+
+    </script>
 </body>
+
 </html>

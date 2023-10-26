@@ -84,3 +84,24 @@
     color: violet;
     background-color: #eee;
 }
+
+/* popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(58, 56, 56, 0.3);
+    place-items: center;
+}
+
+.popup-item {
+    width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(58, 56, 56, 0.3);
+}
