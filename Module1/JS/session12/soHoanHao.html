@@ -20,10 +20,44 @@
             }
         }
 
-        if(total == number) {
+        if (total == number) {
             alert("Đây là số hoàn hảo")
-        }else {
+        } else {
             alert("Đây không phải số hoàn hảo")
+        }
+
+        const n = +prompt("nhập chiều cao")
+        for (let i = 1; i <= n; i++) {
+            let row = "";
+            for (let j = 1; j <= n - i; j++) {
+                row += " ";
+            }
+            if (i === 1 || i === n) {
+                for (let j = 1; j <= i * 2 - 1; j++) {
+                    row += "*";
+                }
+            } else {
+                row += "*";
+                for (let j = 1; j <= (i - 1) * 2 - 1; j++) {
+                    row += " ";
+                }
+                row += "*";
+            }
+            console.log(row);
+        }
+
+        const height = +prompt("Nhập vào chiều cao")
+        for (let i = 0; i <= height; i++) {
+            let result = ""
+
+            for (let k = 0; k <= height - i; k++) {
+                result += " "
+            }
+
+            for (let j = 1; j <= i; j++) {
+                result += "*"
+            }
+            console.log(result);
         }
     </script>
 </body>
