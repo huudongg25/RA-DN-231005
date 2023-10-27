@@ -59,6 +59,20 @@
             }
             console.log(result);
         }
+
+         for (var i = 1; i <= height; i++) {
+            var result = '';
+
+            for (var j = 0; j <= height - i; j++) {
+                result += ' ';
+            }
+
+            for (var k = 1; k <= 2 * i; k++) {
+                result += '*';
+            }
+
+            console.log(result);
+        }
     </script>
 </body>
 
