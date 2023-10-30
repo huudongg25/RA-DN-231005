@@ -6,7 +6,7 @@ function addTodo() {
     const input = prompt("nhập công việc")
     arr.push(input)
     list.innerHTML = ""
-    for(let element of arr) {
-        list.innerHTML += `<li>${element}</li>`
+    for (let index in arr) {
+        list.innerHTML += `<li>${arr[index]} <button> X </button> <button > Edit </button></li>`
     }
 }
