@@ -1,7 +1,7 @@
 // Khai báo 1 mảng => từ khoá khai báo + tên mảng = []
 // Phần tử của mảng có thể lưu trữ bất kì kiểu dữ liệu nào
 // Phần tử : elements - chỉ số : index
-const number = [23,5,2023,30,1000,20000]
+const number = [23, 5, 2023, 30, 1000, 20000]
 
 document.write(number[number.length - 1])
 document.write(number[3])
@@ -16,31 +16,34 @@ for (let el of number) {
 }
 
 //vòng lặp for thường sẽ có điều kiện là bé hơn độ dài của mảng
-for (let i = 0; i < number.length; i++){
-    console.log(">>>>>",number[i]);
+for (let i = 0; i < number.length; i++) {
+    console.log(">>>>>", number[i]);
 }
 
 // Push() thêm phần tử vào vị trí cuối cùng của mảng
 // Push sẽ làm thay đổi trực tiếp đến mảng
 number.push(30)
-console.log(number,'>>>>>');
+console.log(number, '>>>>>');
 
 // Join() sẽ biến đổi mảng thành kiểu string và nối lại với nhau,mặc định là dấu ,
-console.log(number.join("/")); 
+console.log(`${number.join("/")}`);
+
+// template string
+document.write(`"${number.join("/")}"`)
 
 //reverse() sẽ đảo ngược mảng
 console.log(number.reverse().join("/"));
 
 //sort() sẽ là sắp xếp mảng
-console.log(number.sort(function(a,b){
+console.log(number.sort(function (a, b) {
     return b - a
 }));
 
 // concat() là để nối mảng và tạo ra mảng mới
-const a = [1,2,3]
-const b = [4,5,6]
+const a = [1, 2, 3]
+const b = [4, 5, 6]
 
-console.log(a.concat([0,40,50]),"====");
+console.log(a.concat([0, 40, 50]), "====");
 console.log(a);
 
 //pop() để xoá phần tử cuối cùng và lấy ra phần đó => sẽ làm thay đổi trực tiếp vào mảng
@@ -55,3 +58,13 @@ console.log(a);
 // R : read / get
 // U : update
 // D : delete 
+
+//Mảng 2 chiều :
+let cities = [
+    ['Hà Nội', 'Sài Gòn', 'Đà Nẵng'],
+    ['New York', 'California', 'Miami'],
+    ['Tokyo', 'Nagoya', 'Osaka']
+];
+
+
+console.log(cities[2][0]);

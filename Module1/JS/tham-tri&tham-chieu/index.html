@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //tham trị : number , string ,null ,undefined , boolean => sẽ copy giá trị của địa chỉ vùng nhớ đó
+        //tham chiếu : array, object , class => sẽ vào cùng địa chỉ vùng nhớ của biến đó
+
+        let a = 10
+        
+        let b = a
+
+        a = 11
+        console.log(a, b);
+
+        const arr1 = [1,2,3] //địa chỉ :abc
+
+        const arr2 = arr1 //arr2 => địa chỉ :abc
+        arr1.push(5)
+
+        console.log(arr1,arr2);
+
+
+    </script>
+</body>
+
+</html>
