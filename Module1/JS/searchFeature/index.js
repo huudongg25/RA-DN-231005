@@ -11,6 +11,7 @@ function search(){
     const searchProducts = products.filter(function(element,index){
         return element.includes(input)
     })
+    
     list.innerHTML = ""
     searchProducts.forEach(function(element,index){
         list.innerHTML += `<li>${element}</li>`

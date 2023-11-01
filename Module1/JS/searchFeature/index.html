@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .cart {
+            margin:0 50px;
+            position: relative;
+            font-size: 30px;
+        }
+
+        .cart::after {
+            position: absolute;
+            content: attr(data-cart);
+            font-size: 10px;
+            background-color: rgb(233, 228, 228);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: -15px;
+            left: 30px;
+            color: #615b5b;
+            border: 2px solid #fff;
+        }
+    </style>
 </head>
+
 <body>
     <h2>List product</h2>
+    <i class="fa-solid fa-cart-shopping fa-bounce cart" data-cart="10"></i>
     <button onclick="search()">Search</button>
     <ul id="list"></ul>
     <script src="./index.js"></script>
 </body>
+
 </html>
