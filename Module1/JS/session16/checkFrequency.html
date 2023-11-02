@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkFrequency(str) {
+            //cắt chuỗi thành array
+            const arr = str.split(""); 
+
+            // vòng lặp 1 sẽ lặp qua từng kí tự trong arr
+            for (const word of arr) {
+                //đặt ra 1 biến để hiển thị số lần lặp lại
+                let check = 0;
+                //vòng lặp thứ 2 vẫn lặp qua từng kí tự và so sánh cùng với mỗi kí tự của vòng lặp đầu
+                for (const wordCheck of arr) {
+                    if (word === wordCheck) {
+                        check++;
+                    }
+                }
+                //hiển thị kết quả trong vòng lặp 1
+                console.log(`Từ "${word}" xuất hiện ${check} lần.`);
+            }
+        }
+
+        const text = "hello word";
+        checkFrequency(text);
+    </script>
+</body>
+
+</html>
