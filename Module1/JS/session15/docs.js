@@ -9,6 +9,9 @@
 //function khi viết logic thì mình phải xác định được input và output
 
 //hàm này sẽ xử lí logic,tính toán và trả về 1 giá trị
+//hoisting
+console.log(sum(1,2,3));
+
 function sum(a, b, c = 0) {
     if(a < 1) {
         return "Nhập cao hơn"
@@ -47,3 +50,9 @@ arr.forEach(function(element,index){
 console.log(isEven(2));
 console.log(isEven(3));
 console.log(isEven(4));
+
+//declaration function (hàm bth)
+
+
+
+

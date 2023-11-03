@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <!-- function
+        1 Khái niệm
+            - tập hợp các câu lệnh thực hiện 1 tác vụ cụ thể
+            - hàm có thể tái sử dụng lại.( viết 1 lần mà dùng được nhiều lần)
+
+        2. Các loại hàm hay dùng và cách khai báo, các dùng ,của từng loại hàm.
+            2.1 function bình thường. declaration function
+            - quy tắc đặt tên function : quy tắc camel-case( giống quy tắc đặt tên biến)
+            thường bắt đầu bằng động từ.
+            - để hàm được thực thi thì mình phải gọi hàm.
+            - có thể gọi trưỚc khi hoặc sau khi khai báo.
+            2.2 expression function
+            - khi khai báo gán nó cho 1 biến.
+            - đối với hàm này mình phải gọi sau khi khai báo (nếu gọi  trước khi khai báo s
+            sẽ báo lỗi.)
+            - có thể để tên hàm hoặc không nhưng nên để tên hàm cho mọi người biết chức năng
+            của hàm dùng để làm gì.
+            2.3
+          arrow function: hàm mũi tên
+        - mình cũng phải gọi sau khi khai báo không được gọi trước khi khai báo
+        - cú pháp gọn gàng hơn
+        - không có CONTEXT(this).
+
+        3. tham số , đối số trong hàm
+        - nhờ tham số , đối số nên hàm mới có khả năng tái sử dụng.
+        3.1: đối số (argument)
+        - khi gọi hàm truyền cho nó giá trị
+        3.2: tham số(parameters)
+        - nhận giá trị
+
+        4. return trong hàm
+        - hàm gặp return dừng chương trình luôn không chạy nữa.
+        - nếu muốn lấy giá trị của hàm thì dùng return trả về kết quả.
+        - không được ghi các câu lệnh dưới câu lệnh return
+
+        5. đệ quy trong hàm
+        - hàm được tự gọi lại chính nó 
+        - khi dùng đệ quy nên có điểm dừng không sẽ bị treo máy (vòng lặp vô tận);
+
+        6. call-back
+        - là hàm được truyền vào làm đối của hàm khác
+        - thường dùng để xử lý tác vụ bất đồng bộ
+        - map, reduce, forEach, filter -->
+
     <button onclick="sum()"></button>
     <script src="./docs.js"></script>
+    <script>
+        //callback function
+        setTimeout(() => {
+            console.log("Okkkkk");
+        }, 1000)
+
+    </script>
 </body>
+
 </html>
