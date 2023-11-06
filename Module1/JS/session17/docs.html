@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            name: "Bình",
+            age: [20, 21, 23],
+            eat: function () {
+                console.log("eating...");
+            },
+        }
+
+        for (const item in person) {
+            console.log(person[item]);
+        }
+
+        //truy xuất
+        //c1
+        console.log(person.eat());
+
+        //c2 
+        console.log(person['age']);
+        console.log(person['name']);
+
+        //gán lại + tạo mới
+        person.age = 21
+        person.gender = 'male'
+        console.log(person);
+
+        //xoá thuộc tính
+        delete person.age
+
+        // Hàm tạo - constructor
+        function Person(name, age = 0) {
+            this.myName = name
+            this.age = age
+        }
+
+        const tien = new Person("Tiến")
+        const binh = new Person("Bình", 21)
+        console.log(tien.age, binh.myName);
+    </script>
+</body>
+
+</html>

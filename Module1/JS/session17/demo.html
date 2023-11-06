@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //tạo đối tượng users
+        const users = [
+            {
+                id: 1,
+                email: 'tien@gmail.com',
+                name:"",
+                password: '12345',
+                role: 1,
+                carts: [],
+                status: 1
+            },
+            {
+                id: 2,
+                email: 'phuc@gmail.com',
+                name:"",
+                password: '12345',
+                role: 2,
+                carts: [],
+                status: 1
+            },
+            {
+                id: 3,
+                email: 'binh@gmail.com',
+                name:"",
+                password: '12345',
+                role: 2,
+                carts: [{
+                    id: 1,
+                    nameProduct: "iphone15",
+                    price: 200000,
+                    image: "./",
+                    stock: 20,
+                    description: "lorem.....",
+                    quantity: 2,
+                },
+                {
+                    id: 2,
+                    nameProduct: "iphone15",
+                    price: 200000,
+                    image: "./",
+                    stock: 20,
+                    description: "lorem.....",
+                    quantity: 1
+                }
+                ],
+                status: 1
+            }
+        ]
+
+
+
+        //products
+        const products = [
+            {
+                id: 1,
+                nameProduct: "iphone15",
+                price: 200000,
+                image: "./",
+                stock: 20,
+                description: "lorem....."
+            },
+            {
+                id: 2,
+                nameProduct: "iphone15",
+                price: 200000,
+                image: "./",
+                stock: 20,
+                description: "lorem....."
+            },
+            {
+                id: 3,
+                nameProduct: "iphone15",
+                price: 200000,
+                image: "./",
+                stock: 20,
+                description: "lorem....."
+            },
+            {
+                id: 4,
+                nameProduct: "iphone15",
+                price: 200000,
+                image: "./",
+                stock: 20,
+                description: "lorem....."
+            }
+        ]
+
+        //dữ liệu orders
+        const orders = [
+            {
+                id: 1,
+                userId: 2,
+                totalPrice: 1000000000,
+                status: 3,
+                date: '23/02/2023'
+            }
+        ]
+
+
+        function register(){
+            const newUser = {
+                id:5,
+                email:"hieu@gmail.com",
+                password:'1231232412',
+                name:"Hieu",
+                carts:[],
+                status:1,
+                role:2
+            }
+
+            users.push(newUser)
+        }
+    </script>
+</body>
+
+</html>
