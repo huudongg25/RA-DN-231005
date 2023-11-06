@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 15px;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="handleRegister(event)">
+        <label for="">Email</label>
+        <input id="email" type="email">
+
+        <label for="">Name</label>
+        <input id="name" type="text">
+
+        <label for="">Password</label>
+        <input id="password" type="password">
+
+        <input type="submit" value="Đăng kí">
+    </form>
+
+    <form onsubmit="handleLogin(event)">
+        <label for="">Email</label>
+        <input id="email1" type="text">
+
+        <label for="">Password</label>
+        <input id="password1" type="password">
+
+        <input type="submit" value="Đăng nhập">
+    </form>
+    <script>
+        const users = [
+            {
+                id: 1,
+                email: 'tien@gmail.com',
+                name: "",
+                password: '12345',
+                role: 1,
+                carts: [],
+                status: 1
+            },
+            {
+                id: 2,
+                email: 'phuc@gmail.com',
+                name: "",
+                password: '12345',
+                role: 2,
+                carts: [],
+                status: 1
+            },
+            {
+                id: 3,
+                email: 'binh@gmail.com',
+                name: "",
+                password: '12345',
+                role: 2,
+                carts: [],
+                status: 2
+            }
+        ]
+        //JSON là 1 kiểu dữ liệu để giao tiếp giữa client vs server
+        //JSON.stringtify() dùng để chuyển đổi từ kiểu dữ liệu của JS sang JSON
+        //JSON.parse() dùng để chuyển đổi từ JSON sang JS
+        // localStorage.setItem('users',JSON.stringify(users) )
+
+        // console.log(JSON.parse(localStorage.getItem('users')));
+        // localStorage.removeItem('userLogin')
+        // localStorage.clear() // để xoá hết localStorage
+
+        //đăng kí
+        function handleRegister(event) {
+            event.preventDefault()
+            const emailValue = document.getElementById('email')
+            const nameValue = document.getElementById('name')
+            const passwordValue = document.getElementById('password')
+
+            const mainData = JSON.parse(localStorage.getItem('users'))
+            //hàm find() trả về element đầu tiên tìm thấy, nếu không có thì trả về -1
+            const checkEmail = mainData.find((item) => item.email == emailValue.value)
+
+            console.log(checkEmail);
+            if (checkEmail) {
+                return alert("Email đã tồn tại")
+            } else {
+                const newUser = {
+                    id: mainData[mainData.length - 1].id + 1,
+                    email: emailValue.value,
+                    name: nameValue.value,
+                    password: passwordValue.value,
+                    role: 2,
+                    carts: [],
+                    status: 1
+                }
+
+                mainData.push(newUser)
+                localStorage.setItem('users', JSON.stringify(mainData))
+            }
+        }
+
+        //đăng nhập
+        function handleLogin(event) {
+            event.preventDefault() //ngăn chặn sự kiện mặc định
+            const emailInput = document.getElementById("email1")
+            const passwordInput = document.getElementById("password1")
+
+            const db = JSON.parse(localStorage.getItem('users'))
+            const userLogin = db.find((item, index) => {
+                return item.email == emailInput.value && item.password == passwordInput.value
+            })
+            if (userLogin) {
+                //check xem có bị khoá tài khoản không
+                if (userLogin.status == 1) {
+                    // window.location.href = '' để chuyển hướng
+                    localStorage.setItem("userLogin", JSON.stringify(userLogin)) //lưu thông tin đăng nhập thành công
+                } else {
+                    alert("Tài khoản bị khoá")
+                }
+            } else {
+                alert("Tài khoản hoặc mật khẩu không đúng")
+            }
+        }
+    </script>
+</body>
+
+</html>
