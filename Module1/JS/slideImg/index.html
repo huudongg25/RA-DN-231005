@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-main {
+            width: 1000px;
+            height: 700px;
+            position: relative;
+        }
+
+        .img-main img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .img-sub {
+            display: flex;
+            gap: 5px;
+            background-color: #938e8e;
+            padding: 5px;
+            overflow-x: scroll;
+            width: 1000px;
+            margin-top: 50px;
+        }
+
+        .img-sub img {
+            width: 190px;
+            padding: 10px;
+        }
+
+        .img-sub img.active {
+            background-color: #ddd;
+        }
+
+        .right,
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #ddd;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .right {
+            top: 50%;
+            right: -50px;
+        }
+
+        .left {
+            top: 50%;
+            left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="img-main">
+            <img src="https://hoangthuong.net/wp-content/uploads/2022/05/hinh-anh-cho-con-de-thuong-27.jpg" alt="">
+            <span onclick="handleClickRight()" class="right">></span>
+            <span onclick="handleClickLeft()" class="left">
+               &#60; </span>
+        </div>
+        <div class="img-sub">
+            
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
