@@ -12,6 +12,7 @@ const imgArr = [
 
 const imgSub = $('.img-sub')
 const imgMain = $('.img-main img')
+
 let currentIndex = 0
 
 imgArr.forEach((item, index) => {

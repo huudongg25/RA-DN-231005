@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const str = 'hello'
+        const todoList = [
+            { content: 'Công việc', status: false }
+        ]
+
+        todoList.push({content:'',status:false})
+
+        localStorage.setItem('todoList', JSON.stringify(todoList)) // lưu lên local => JSON.stringtify() dùng để chuyển từ JS sang JSON
+        JSON.parse(localStorage.getItem('greeting')) // lấy về từ local theo key => JSON.parse() dùng để chuyển từ JSON về JS
+        localStorage.removeItem('greeting') //dùng để xoá local theo key
+    </script>
+</body>
+
+</html>
