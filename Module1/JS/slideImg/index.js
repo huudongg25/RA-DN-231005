@@ -1,3 +1,6 @@
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+
 const imgArr = [
     'https://hoangthuong.net/wp-content/uploads/2022/05/hinh-anh-cho-con-de-thuong-27.jpg',
     'https://img.meta.com.vn/Data/image/2021/09/22/anh-cho-dep-0.jpg',
@@ -7,8 +10,8 @@ const imgArr = [
     'https://png.pngtree.com/thumb_back/fw800/background/20230614/pngtree-bunch-of-white-puppies-standing-together-by-a-black-background-image_2922467.jpg'
 ]
 
-const imgSub = document.querySelector('.img-sub')
-const imgMain = document.querySelector('.img-main img')
+const imgSub = $('.img-sub')
+const imgMain = $('.img-main img')
 let currentIndex = 0
 
 imgArr.forEach((item, index) => {
@@ -16,7 +19,7 @@ imgArr.forEach((item, index) => {
 })
 
 function renderImg() {
-    const listSubImg = document.querySelectorAll('.img-sub img')
+    const listSubImg = $$('.img-sub img')
     listSubImg.forEach((item) => {
         item.classList.remove('active')
     })
@@ -53,7 +56,7 @@ setInterval(() => {
     renderImg()
 }, 10000)
 
-const listImgSub = document.querySelectorAll('.img-sub img')
+const listImgSub = $$('.img-sub img')
 
 listImgSub.forEach((item, index) => {
     item.addEventListener('click', () => {
