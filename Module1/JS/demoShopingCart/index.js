@@ -79,7 +79,7 @@ function renderProducts() {
     dataLocal.forEach((item, index) => {
         containerProduct.innerHTML += `
         <figure class="product">
-            <img src=${item.img} alt="">
+            <img onclick="renderDetail(${item.id})" src=${item.img} alt="">
             <figcaption>
                 <h3>${item.nameProduct}</h3>
                 <p><b>Giá :</b> ${item.price}</p>
@@ -166,4 +166,8 @@ function deleteFromCart(id) {
 
     localStorage.setItem('cart',JSON.stringify(newData))
     renderCart()
+}
+
+function renderDetail(id){
+    window.location.href = './detail.html?id=' + id
 }
