@@ -1,14 +1,11 @@
 const todoList = [
-    {
-        content: "todo",
-        status: false
-    }
+   
 ]
 
+//khởi tạo dữ liệu ban đầu
 if (!JSON.parse(localStorage.getItem("todoList"))) {
     localStorage.setItem('todoList', JSON.stringify(todoList))
 }
-
 
 //render
 function renderTodo() {
@@ -19,9 +16,9 @@ function renderTodo() {
     const listTodo = document.querySelector('#myUL') //get thẻ ul
 
     // b3: dùng vòng lặp => lặp qua mảng data local và dùng listTodo để thêm từng phần tử vào HTML
-    listTodo.innerHTML = ""
+    listTodo.innerText = ""
 
-    localData.forEach(function (item, index) {
+    localData.forEach(function (item, index) { 
         listTodo.innerHTML += `
         <li>
             <p style="text-decoration:${item.status ? 'line-through' : 'none'}" onclick="updateTodo('${index}')">${item.content}</p>
@@ -31,7 +28,7 @@ function renderTodo() {
             </div>
         </li>
         `
-        //sử dụng cú pháp template string để render được dữ liệu
+        //sử dụng cú pháp template string(ES6) để render được dữ liệu
     })
 }
 renderTodo()
@@ -68,7 +65,7 @@ function addTodo() {
 //delete
 
 function deleteTodo(index) {
-
+    
     // b1 : lấy dữ liệu về từ localStorage
     const dataLocal = JSON.parse(localStorage.getItem('todoList')) //array
     console.log(dataLocal);
