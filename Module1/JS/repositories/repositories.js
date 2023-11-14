@@ -6,7 +6,7 @@ export function getAllItems(tableName) {
     return entities;
 }
 
-//Create 
+//Create (tên db,object thêm vào)
 export function insertItem(tableName, entity) {
     try {
         if (!entity.id) {
@@ -31,6 +31,7 @@ export function insertItem(tableName, entity) {
 
         return 0;
     } catch (error) {
+        console.log(error);
         return 0;
     }
 }
