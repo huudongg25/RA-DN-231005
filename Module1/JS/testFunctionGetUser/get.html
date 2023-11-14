@@ -11,11 +11,18 @@
     <ul id="list">
 
     </ul>
+
+    <button onclick="deleteButton()">test</button>
+    
     <script type="module" src="./get.js"></script>
     <script type="module">
-        import { renderUser } from './get.js'
+        import { renderUser,deleteUser } from './get.js'
 
-        renderUser()
+        window.addEventListener('load', () => {
+            renderUser()
+        })
+
+        window.deleteButton = deleteUser
     </script>
 </body>
 
