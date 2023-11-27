@@ -3,7 +3,7 @@ import { getAllItems } from '../repositories/repositories.js'
 
 const userService = new UserServices()
 
-export function deleteUser(id){
+function deleteUser(id){
     userService.deleteUser(id)
 }
 

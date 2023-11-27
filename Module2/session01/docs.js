@@ -38,7 +38,7 @@ function sum(...rest) {
 
     const total = rest.reduce((total, item) => {
         return total + item
-    },0)
+    }, 0)
     return total
 }
 
@@ -47,3 +47,4 @@ console.log(sum(1, 2, 3, 'a'));
 console.log(sum(1, 2, 3));
 
 console.log(`${password}`);
+
