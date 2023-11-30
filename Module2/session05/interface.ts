@@ -33,7 +33,7 @@ console.log(arr1[0].getName(1));
 interface Person2 {
     name: string
     age: number
-    getName():void
+    getName(): void
 }
 
 interface Gender2 extends Person2 {
@@ -50,8 +50,29 @@ class Male2 implements Gender2 {
         this.age = age
         this.gender = gender
     }
-  
+
     getName(): void {
         console.log(this.name);
     }
 }
+
+
+interface Student {
+
+    name: string
+
+    age: number
+
+    study(): void
+
+}
+
+const students: Student[] = []
+
+students.concat({
+    name: "Hieu", age: 20, study() {
+        console.log('ok');
+    },
+})
+
+console.log(students)

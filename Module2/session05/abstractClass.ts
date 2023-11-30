@@ -21,20 +21,21 @@ abstract class Person {
     abstract getName(): void
 }
 
+
 abstract class Man extends Person {
-    gender:string
-    constructor(gender:string,name: string, age: number) {
-        super(name,age)
+    gender: string
+    constructor(gender: string, name: string, age: number) {
+        super(name, age)
         this.gender = gender
     }
 
-    abstract greeting():void
+    abstract greeting(): void
 }
 
 
 class Male extends Man {
-    constructor(name: string, age: number,gender:string) {
-        super(gender,name, age)
+    constructor(name: string, age: number, gender: string) {
+        super(gender, name, age)
     }
 
     getName(): void {
@@ -46,3 +47,4 @@ class Male extends Man {
         console.log('hello');
     }
 }
+
