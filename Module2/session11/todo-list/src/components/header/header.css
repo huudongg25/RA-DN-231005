@@ -1,0 +1,37 @@
+.header {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-header {
+    color: #c8503c;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.input-todo {
+    background-color: #232933;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: #ffff;
+    margin-right: 10px;
+}
+
+.input-todo::placeholder {
+    color: #435464;
+}
+
+.button-todo {
+    background-color: #a9ddf8;
+    color: #333;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+}

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import LearnState from "./components/learnState";
 import LearnEffect from "./components/learnEffect";
 import LearnRef from "./components/learnRef";
+import LearnReducer from "./components/learnReducer";
+import LearnCallback from "./components/learnCallback";
+import MyContext from "./contextApi/myContext";
+import LearnMemo from "./components/learnMemo";
 
 function App() {
   const data = [
@@ -23,22 +27,35 @@ function App() {
       desc: "học bài 4",
     },
   ];
-
-  const showData = (): any => {
-    console.log(data);
-  };
-
+  const [theme, setTheme] = useState("dark");
+ 
   return (
-    <div className="App">
-      {/* <button onClick={() => showData()}>click</button>
+    <MyContext.Provider value={theme}>
+      <div className="App">
+        <button
+          onClick={() => {
+            if (theme == "dark") {
+              setTheme("light");
+            } else {
+              setTheme("dark");
+            }
+          }}
+        >
+          change
+        </button>
+        {/* <button onClick={() => showData()}>click</button>
       {data.map((item, index) => {
         return <Card key={index} title={item.title} desc={item.desc} />;
       })} */}
 
-      {/* <LearnState/> */}
-      {/* <LearnEffect/> */}
-      <LearnRef/>
-    </div>
+        {/* <LearnState/> */}
+        {/* <LearnEffect/> */}
+        {/* <LearnRef/> */}
+        {/* <LearnReducer /> */}
+        {/* <LearnCallback/> */}
+        <LearnMemo/>
+      </div>
+    </MyContext.Provider>
   );
 }
 
