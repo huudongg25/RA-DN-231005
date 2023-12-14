@@ -33,6 +33,7 @@ const TableCart: React.FC<Props> = (props: Props) => {
     {
       title: "Price",
       dataIndex: "price",
+      render:(data:any) => <>{data.toLocaleString()}đ</>
     },
     {
       title: "Quantity",
@@ -57,6 +58,7 @@ const TableCart: React.FC<Props> = (props: Props) => {
     {
       title: "Total Price",
       dataIndex: "totalPrice",
+      render:(data:any) => <>{data.toLocaleString()}đ</>
     },
     {
       title: "Actions",
