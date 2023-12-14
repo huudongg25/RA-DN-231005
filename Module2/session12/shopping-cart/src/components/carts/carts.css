@@ -1,0 +1,6 @@
+.payment-btn {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--button-register-color);
+    color: var(--background-sub-color);
+}

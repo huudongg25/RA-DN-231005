@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --primary-color: #5880d6;
+  --scroll-up-color: #5880d6;
+
+  --text-color: #050505;
+  --placeholder-color: #d9b3b7;
+  --icon-color: #606770;
+  --border-color: #ced0d4;
+  --border-header-color: #d2d4d8;
+
+  --background-main-color: #f0f2f5;
+  --background-modal-main-color: rgba(240, 242, 245, 0.7);
+  --background-content-modal-main-color: rgba(240, 242, 245, 1);
+  --background-sub-color: #ffffff;
+  --background-input-color: #ffffff;
+
+  --hover-color: #f0f0f0;
+
+  --black-color: #333333;
+  --white-color: #ffffff;
+
+  --background-color-login: #f0f2f5;
+  --border-input-login: #1b74e4;
+  --button-register-color: #bfaa0a;
+  --border-color-login: #dadde1;
+  --main-color-login: #5880d6;
+  --text-login-color: #1c1e21;
+  --white-color-login: #fff;
+  --err-login-color: #cf1717;
+}
+
+.dark-theme {
+  --primary-color: #0571ed;
+  --scroll-up-color: #90676b;
+
+  --text-color: #e4e6eb;
+  --placeholder-color: #b0b3b8;
+  --icon-color: #b0b3b8;
+  --border-color: #ced0d4;
+  --border-header-color: #393a3b;
+
+  --background-main-color: #18191a;
+  --background-modal-main-color: rgb(24, 25, 26, 0.7);
+  --background-content-modal-main-color: rgb(24, 25, 26, 1);
+  --background-sub-color: #242526;
+  --background-input-color: #3a3b3c;
+
+  --hover-color: #3a3b3c;
+
+  --black-color: #333333;
+  --white-color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-main-color);
+  transition: 0.3s;
+  color: var(--text-color);
+}
+
+html {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}

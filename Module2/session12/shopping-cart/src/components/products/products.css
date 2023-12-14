@@ -1,0 +1,13 @@
+.wrapper-products {
+    padding: 20px;
+}
+
+.title-products {
+    margin: 10px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    gap: 20px;
+}
