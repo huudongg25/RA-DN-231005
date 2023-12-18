@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
@@ -11,10 +11,12 @@ function App() {
   // useParam() :để lấy param
   //useNavigate() : để chuyển hướng và có thể truyền dữ liệu kèm khi chuyển hướng
   // useLocation() : lấy thông tin ở trang hiện tại
-
+  const [state, setState] = useState(1);
   return (
     <div className="App">
-      <Routes>
+      <TableComponent />
+      <button onClick={() => setState(state + 1)}>click</button>
+      {/* <Routes>
         <Route
           path="/"
           element={<DefaultLayout child={<TableComponent />} />}
@@ -24,7 +26,7 @@ function App() {
           path="/date"
           element={<PaymentLayout child={<DatePickerComponent />} />}
         />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

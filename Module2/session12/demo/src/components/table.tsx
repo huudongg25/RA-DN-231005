@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { Divider, Radio, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -27,10 +27,12 @@ const columns: ColumnsType<DataType> = [
   {
     title: "Actions",
     dataIndex: "actions",
-    render:()=> <div>
+    render: () => (
+      <div>
         <button>Xoá</button>
         <button>Sửa</button>
-    </div>
+      </div>
+    ),
   },
 ];
 
@@ -149,8 +151,8 @@ const rowSelection = {
 };
 
 const TableComponent: React.FC = () => {
-
-  const location = useLocation()
+  console.log("re-render");
+  const location = useLocation();
   console.log(location.state);
 
   const [selectionType, setSelectionType] = useState<"checkbox" | "radio">(
@@ -159,13 +161,9 @@ const TableComponent: React.FC = () => {
 
   return (
     <div>
-
-      <Table
-        columns={columns}
-        dataSource={data}
-      />
+      <Table columns={columns} dataSource={data} />
     </div>
   );
 };
 
-export default TableComponent;
+export default memo(TableComponent);
