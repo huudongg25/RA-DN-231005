@@ -5,7 +5,7 @@ import axios from "axios";
 function App() {
   const [users,setUsers]= useState<any>()
   useEffect(() => {
-    axios.get("http://localhost:8000/users/?name=Pug")
+    axios.get("http://localhost:8000/users/?age=99")
     .then((data) => console.log(data))
     .catch((err)=>{
       console.log(err);
