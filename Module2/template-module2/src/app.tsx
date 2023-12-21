@@ -1,20 +1,15 @@
 import React, { useEffect } from "react";
 import "./app.css";
 import UserService from "./services/user.service";
+import Routers from "./routers/routers.route";
 
 function App() {
-  const userService = new UserService();
 
-  useEffect(() => {
-    try {
-      userService.login({ username: "dong", password: 1111 });
-      window.location.href = "/aaaaaaa";
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-  
-  return <div className="App"></div>;
+ 
+
+  return <div className="App">
+    <Routers/>
+  </div>;
 }
 
 export default App;
