@@ -22,15 +22,16 @@ const Login: React.FC = () => {
   const dispatch = useDispatch();
 
   const onFinish = async (values: any) => {
-    dispatch(handleLogin(formData) as any)
-      .unwrap()
-      .then((result:any) => {
-        navigate("/");
-      })
-      .catch((err:any) => {
-        console.log(err);
-      });
-   
+    const response = await dispatch(handleLogin(formData) as any).unwrap();
+
+    if (response?.response?.status == 400) {
+      notifyError(response.response.data);
+      return;
+    }
+    console.log(response);
+    if (response?.status == 201 || response?.status == 200) {
+      navigate("/");
+    }
   };
 
   const onFinishFailed = (errorInfo: any) => {

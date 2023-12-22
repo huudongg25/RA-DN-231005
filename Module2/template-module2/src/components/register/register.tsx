@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import UserService from "../../services/user.service";
 import { useNavigate } from "react-router-dom";
+import { notifyError } from "../../common/toastify";
+import { ToastContainer } from "react-toastify";
 
 type FieldType = {
   email?: string;
@@ -25,8 +27,8 @@ const Register: React.FC = () => {
       if (response.status == 201) {
         navigate("/login", { state: true });
       }
-    } catch (error) {
-      alert(error);
+    } catch (error:any) {
+      notifyError(error.response.data)
     }
   };
 
@@ -51,6 +53,7 @@ const Register: React.FC = () => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
+      <ToastContainer/>
       <Form.Item<FieldType>
         label="Email"
         name="email"

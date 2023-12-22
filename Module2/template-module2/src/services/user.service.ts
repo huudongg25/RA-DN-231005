@@ -8,13 +8,21 @@ class UserService {
     }
 
     public async register(formRequestModel: any): Promise<any> {
-        this._validate(formRequestModel)
-        return await this.userRepository.register(formRequestModel)
+        try {
+            this._validate(formRequestModel)
+            return await this.userRepository.register(formRequestModel)
+        } catch (error: any) {
+            throw error
+        }
     }
 
     public async login(formRequestModel: any): Promise<any> {
-        this._validate(formRequestModel)
-        return await this.userRepository.login(formRequestModel)
+        try {
+            this._validate(formRequestModel)
+            return await this.userRepository.login(formRequestModel)
+        } catch (error) {
+            throw error
+        }
     }
 
     public async getInformation(id: number): Promise<any> {

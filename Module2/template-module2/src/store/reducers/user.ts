@@ -8,10 +8,9 @@ export const handleLogin = createAsyncThunk('user/fetchById', async (formData: a
     const response: any = await userService.login(formData)
     console.log(response);
     localStorage.setItem('token', response.data.accessToken)
-    return response.data
+    return response
    } catch (error) {
-    console.log(error);
-    throw error
+    return error
    }
 })
 
@@ -20,7 +19,6 @@ export const userSlice = createSlice({
     name: 'user',
     initialState: {
         loading: false,
-        error: false,
         data: undefined
     },
     reducers: {
@@ -32,12 +30,7 @@ export const userSlice = createSlice({
         })
         builder.addCase(handleLogin.fulfilled, (state, action) => {
             state.loading = false
-            state.data = action.payload
-            state.error = false
-        })
-        builder.addCase(handleLogin.rejected, (state, action) => {
-            state.loading = false
-            state.error = true
+            state.data = action.payload.data
         })
     }
 })
