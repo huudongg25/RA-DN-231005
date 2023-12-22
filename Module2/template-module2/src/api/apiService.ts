@@ -1,16 +1,24 @@
 import axios from "axios"
+import baseAxios from "../configs/axios.config"
 
 class ApiService {
-    async Post(endpoint: string):Promise<any> {
-        
+    async post(endpoint: string, data: any): Promise<any> {
+        return await baseAxios.post(endpoint, { data })
     }
 
-    async Get():Promise<any> {
+    async getById(endpoint: string, id: number): Promise<any> {
+        return await baseAxios.get(`${endpoint}/${id}`)
+    }
+
+    async get(): Promise<any> {
 
     }
 
-    async Patch():Promise<any>{}
+    async patch(): Promise<any> { }
 
+    async put(): Promise<any> { }
+
+    async delete(): Promise<any> { }
 
 }
 
