@@ -1,11 +1,13 @@
-import React from "react";
+import { jwtDecode } from "jwt-decode";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const data = useSelector((state: any) => state.user);
-  console.log(data);
-  return <div>Chào mừng {data.data?.user?.email}
+  const data = localStorage.getItem('token')
+  const decoded:any = jwtDecode(data as string);
+console.log(decoded);
+return <div>Chào mừng {decoded.email}
     <Link to="/profile" >Profile</Link>
   </div>;
 };
