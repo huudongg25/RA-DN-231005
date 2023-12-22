@@ -11,7 +11,6 @@ class ApiService {
     }
 
     async get(): Promise<any> {
-
     }
 
     async patch(): Promise<any> { }
