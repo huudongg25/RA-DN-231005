@@ -3,7 +3,7 @@ import baseAxios from "../configs/axios.config"
 
 class ApiService {
     async post(endpoint: string, data: any): Promise<any> {
-        return await baseAxios.post(endpoint, { data })
+        return await baseAxios.post(endpoint, data)
     }
 
     async getById(endpoint: string, id: number): Promise<any> {

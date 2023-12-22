@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "dong@gmail.com",
+      "password": "$2a$10$J.hfpqK0dVTH3.tphTtitObT2Ouf.4K/f7Mrh0CYMpX9VdeKQCAMa",
+      "address": "DN",
+      "id": 1
+    },
+    {
+      "email": "phuc@gmail.com",
+      "password": "$2a$10$2KEuIOu8tfGZ2g0x2Eku9en7bFXXjlRo9Ag283HZlFugbCLUBk35q",
+      "address": "QNAM",
+      "id": 2
+    },
+    {
+      "email": "hieuthu2@gmail.com",
+      "password": "$2a$10$0Vccx8ppP1RHjwE9C9wfCORavKhg/KvQx7cxsrgEXnf0jFRYeuW.K",
+      "address": "Hue",
+      "id": 3
+    }
+  ]
+}

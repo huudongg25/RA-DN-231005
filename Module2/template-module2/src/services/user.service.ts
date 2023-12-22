@@ -7,16 +7,25 @@ class UserService {
         this.userRepository = new UserRepository()
     }
 
-    public login(loginRequestModel: any): any {
-        this._validate(loginRequestModel)
-        return this.userRepository.getUser()
+    public async register(formRequestModel: any): Promise<any> {
+        this._validate(formRequestModel)
+        return await this.userRepository.register(formRequestModel)
     }
 
-    private _validate(loginRequestModel:any) { //Quy tắc có access modifiler private thì có dấu _ ở trước
-        if (!loginRequestModel.username) {
-            throw new ServiceError('username is wrong')
+    public async login(formRequestModel: any): Promise<any> {
+        this._validate(formRequestModel)
+        return await this.userRepository.login(formRequestModel)
+    }
+
+    public async getInformation(id: number): Promise<any> {
+        return await this.userRepository.getInformation(id)
+    }
+
+    private _validate(formRequestModel: any) { //Quy tắc có access modifiler private thì có dấu _ ở trước
+        if (!formRequestModel.email) {
+            throw new ServiceError('email is wrong')
         }
-        if (!loginRequestModel.password) {
+        if (!formRequestModel.password) {
             throw new Error('password is wrong')
         }
     }
