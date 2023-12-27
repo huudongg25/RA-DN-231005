@@ -10,14 +10,18 @@ class ApiService {
         return await baseAxios.get(`${endpoint}/${id}`)
     }
 
-    async get(): Promise<any> {
+    async getAll(endpoint: string): Promise<any> {
+        return await baseAxios.get(endpoint)
     }
 
-    async patch(): Promise<any> { }
+    async patch(endpoint: string, id: number, formData: any): Promise<any> { 
+        
+    }
 
     async put(): Promise<any> { }
 
     async delete(): Promise<any> { }
+
 
 }
 
