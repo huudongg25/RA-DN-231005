@@ -64,6 +64,10 @@ const server = http.createServer((req, res) => {
                 id: convertFile[convertFile.length - 1].id + 1
             })
             fs.writeFileSync(pathDB, JSON.stringify(newData), 'utf-8')
+            res.writeHead(302,{
+                location:'http://localhost:8000/product'
+            })
+            res.end()
         })
     }
 
