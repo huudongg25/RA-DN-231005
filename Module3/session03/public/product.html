@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="http://localhost:8000/">HOME</a></li>
+        <li><a href="http://localhost:8000/product">PRODUCT</a></li>
+        <li><a href="http://localhost:8000/add-product">ADD PRODUCT</a></li>
+    </ul>
+    <h1>PRODUCT PAGE</h1>
+
+    <ul id="list">{{list}}</ul>
+
+    <script>
+        function deleteProduct(id) {
+            fetch(`http://localhost:8000/product/${id}`, { method: 'DELETE' })
+                .then(() => {
+                    window.location.reload()
+                })
+        }
+    </script>
+</body>
+
+</html>
