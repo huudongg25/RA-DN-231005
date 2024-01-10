@@ -1,17 +1,15 @@
 import express from 'express'
 
-
-const router = express.Router()
-
-router.get('/',(req,res)=>{
+const productController = express.Router()
+productController.get('/',(req,res)=>{
     res.json('ok')
 })
 
-router.get('/infor',(req,res)=>{
+productController.get('/infor',(req,res)=>{
     res.json('ok22')
 })
-router.get('/:id',(req,res)=>{
+productController.get('/:id',(req,res)=>{
     res.json('ok22')
 })
 
-export default router
+export default productController
