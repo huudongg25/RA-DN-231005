@@ -1,0 +1,20 @@
+<body>
+    <%- include('./header.ejs') %>
+        <h3>Hello <%= username %>
+        </h3>
+        <% for( let index=0; index < list.length; index++ ) { %>
+            <p>
+                <%= list[index].name %>
+            </p>
+            <button onclick="deleteItem('<%= list[index].id %>')">Delete</button>
+            <% } %>
+</body>
+<script>
+    function deleteItem(id) {
+        fetch(`http://localhost:8000/user/${id}`, {
+            method: 'DELETE',
+        }).then(() => {
+            window.location.href = 'http://localhost:8000/test'
+        })
+    }
+</script>
