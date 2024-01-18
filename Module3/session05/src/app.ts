@@ -1,7 +1,7 @@
-import express from 'express'
+import express, {Express, Request, Response } from 'express'
 import path from 'path';
 
-const app = express()
+const app:Express = express()
 app.use(express.static('public'));
 app.set("view engine", "ejs") //set toàn bộ dự án sử dụng ejs
 app.set("views", path.join(__dirname, "views")); // cấu hình file lưu trữ template engine
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     })
 })
 
-app.get('/test', (req, res) => {
+app.get('/test', (req: Request, res: Response) => {
     res.render('test')
 })
 app.delete('/user/:id', (req, res) => {
