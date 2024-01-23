@@ -1,44 +1,17 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 import sequelize from './configs/db.config';
-import User from './models/user.model';
 import createTable from './models';
-import Information from './models/infor.model';
-import { Op } from 'sequelize';
-import Cart from './models/cart.model';
-
+import Router from './router';
 const app = express()
 
-sequelize.authenticate();
-createTable()
+app.use(urlencoded())
+// app.use(cors())
+// app.use(bodyParser.json())
 
-app.get('/cart', async (req, res) => {
-    await Information.create({
-        username: 'aaaaa',
-        password: '333333',
-        userId: 3
-    })
-    res.json('ok')
-})
+sequelize.authenticate(); //kết nối db
+createTable() //Chạy hàm tạo bảng
 
-app.get('/', async (req, res) => {
-    const data = await User.findAll({
-        include: [{
-            model: Information,
-            attributes: ['id', 'username', 'password'],
-        }, {
-            model: Cart,
-            attributes: ['price']
-        }],
-        where: {
-            firstName: {
-                [Op.like]: `%${req.query.firstName}%`
-            }
-        }
-
-    })
-    res.json(data)
-})
-
+Router(app) //Config router
 
 app.listen(8000, () => {
     console.log('http://localhost:8000');
