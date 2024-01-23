@@ -12,18 +12,29 @@ sequelize.authenticate();
 createTable()
 
 app.get('/cart', async (req, res) => {
-    await Cart.create({
-        price: 1000,
-        userId: 1
+    await Information.create({
+        username: 'aaaaa',
+        password: '333333',
+        userId: 3
     })
     res.json('ok')
 })
 
 app.get('/', async (req, res) => {
-    const data = await User.destroy({
+    const data = await User.findAll({
+        include: [{
+            model: Information,
+            attributes: ['id', 'username', 'password'],
+        }, {
+            model: Cart,
+            attributes: ['price']
+        }],
         where: {
-            id: 1
+            firstName: {
+                [Op.like]: `%${req.query.firstName}%`
+            }
         }
+
     })
     res.json(data)
 })
