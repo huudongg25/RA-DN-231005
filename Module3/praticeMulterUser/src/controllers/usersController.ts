@@ -30,7 +30,6 @@ usersController
                 email: req.body.email,
                 password: req.body.password
             }
-            req.session.test = 123;
             const result = await userService.login(loginForm)
             if (result == 1) {
                 res.status(400).json({ msg: 'Email wrong' })
